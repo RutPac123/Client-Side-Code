@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/regback"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_marginLeft="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi,User"
+        android:textSize="50dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please enter your details..."
+            android:id="@+id/entertxt"
+            android:layout_below="@id/name"
+            android:textSize="20sp"
+            android:layout_marginLeft="60dp"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/entertxt">
+
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="30sp"
+            android:src="@drawable/line"
+            android:id="@+id/line1"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:textSize="16dp"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:translationX="-5dp"
+            android:padding="14sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/Phonenoedittext"
+            android:hint="Enter Phone Number ..."
+            android:drawablePadding="10dp"
+            android:alpha="0.7"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+            android:background="@drawable/inputbg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="30sp"
+            android:src="@drawable/line"
+            android:alpha="0.7"
+            android:layout_below="@+id/line1"
+            android:layout_marginTop="55dp"
+            android:id="@+id/line2"/>
+
+        <EditText
+            android:textSize="16dp"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:translationX="-5dp"
+            android:padding="14sp"
+            android:id="@+id/accNo"
+            android:alpha="0.7"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/Phonenoedittext"
+            android:hint="Enter Account Number ..."
+            android:drawablePadding="10dp"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/ic_account_balance_black_24dp"
+            android:background="@drawable/inputbg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:layout_width="35sp"
+                android:layout_height="30sp"
+                android:src="@drawable/line"
+                android:id="@+id/line"
+                android:layout_below="@+id/line2"
+                android:layout_marginTop="50dp"/>
+
+            <EditText
+                android:textSize="16dp"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:translationX="-5dp"
+                android:padding="14dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/accNo"
+                android:id="@+id/clientName"
+                android:alpha="0.7"
+                android:layout_toRightOf="@+id/line"
+                android:hint="Enter your name..."
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:background="@drawable/inputbg"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:layout_marginTop="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:id="@+id/okBtn2"
+                android:layout_below="@id/accNo"
+                />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:layout_below="@+id/clientName"
+            android:layout_marginTop="10dp"
+            android:id="@+id/searchList"
+            android:layout_marginLeft="30dp"
+            android:visibility="invisible"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/PhoneVerify"
+            android:layout_marginTop="100sp"
+            android:src="@drawable/ic_arrow_forward_black_24dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/accNo"
+            app:backgroundTint="#fff"/>
+    </RelativeLayout>
+
+
+
+
+
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/coord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        tools:context=".activities.MainActivity"/>
+
+</RelativeLayout>
